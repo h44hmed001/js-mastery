@@ -30,7 +30,7 @@ const Filters = () => {
 
   return (
     <ul
-      className={`text-white-800 no-scrollbar max-w-full sm:max-w-2xl overflow-auto  flex max-md:px-5 justify-between  mx-auto w-full`}
+      className={`text-white-800 mt-8 no-scrollbar max-w-full sm:max-w-2xl overflow-auto  flex max-md:px-5 justify-between  mx-auto w-full`}
     >
       {links.map((link) => (
         <button
