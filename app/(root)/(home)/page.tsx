@@ -46,9 +46,10 @@ const Page = async ({ searchParams }: Props) => {
                 <ResourceCard
                   key={resource._id}
                   title={resource.title}
-                  id={resource._id}
+                  category={resource.category}
+                  slug={resource.slug}
                   image={resource.image}
-                  downloadNumber={resource.views}
+                  views={resource.views}
                   downloadLink={resource.downloadLink}
                 />
               ))
@@ -68,11 +69,12 @@ const Page = async ({ searchParams }: Props) => {
           <div className="mt-12 flex w-full flex-wrap justify-center gap-16 sm:justify-start">
             {item.resources.map((resource: any) => (
               <ResourceCard
+                slug={resource.slug}
                 key={resource._id}
                 title={resource.title}
-                id={resource._id}
+                category={resource.category}
                 image={resource.image}
-                downloadNumber={resource.views}
+                views={resource.views}
                 downloadLink={resource.downloadLink}
               />
             ))}
